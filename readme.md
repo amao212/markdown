@@ -1,6 +1,7 @@
 # Uso del lenguaje c y c++ 
-C programción estructurada
-C++ programació orientada a objetos
+- C programción estructurada
+
+- C++ programació orientada a objetos
 ## C UNIX (Programación estructurada)
 -Tipos de datos 
 
@@ -12,31 +13,37 @@ bool,
 
 -Control de flujo (define le conportamiento de los datos)
 
-if-else,
-for(n),
-while(<>!=),
-Do (<> != ==),
-beak,
-switch
+- if-else,
+
+- for(n),
+
+- while(<>!=),
+
+- Do (<> != ==),
+
+- beak,
+
+- switch.
 
 -Lenguaje de máquina
 
-1001010010001
+- 1001010010001
 
 -Lenguaje natural
 
-Idioma en el que hablamos
+- Idioma en el que hablamos
 
 Ejemplo: 
 
+```c
 int a=10;   
 char nombre=";
 
-while(a < 10)  
+while(a < 10)
 {           
     a =a +1;      
 }
-
+```
 " ANSI C" es un instituto para indicar la utilización de las cosas
 
 -Colección de cabezadores (headers)
@@ -54,12 +61,30 @@ procedimientos( )
 - Código (debugging)
 - Traza (trace) - prueba de escritorio
 
+### Diagrama de flujo
 
+![diagramadeflujo](/resource/1.2.png)
+
+
+### Ejemplo:
 1. Problema : ¿Determinar el area de un rectángulo?
 2. Solución
 - AreaRect = largo x ancho (metros)
-- Algoritmo (pseudocódigo)
 
+![arearectangulo](/resource/1.1.png)
+
+## Algoritmia: pseudocódigo, diagrama de flujo, trazabilidad
+
+- imprimir "introdusca una longitud en metros:"
+- leer longitud
+- imprimir "introdusca una anchura en metros:"
+- leer ancho
+- asignar arearectangulo = largo * ancho
+- imprimir "El área es de " arearectangulo "metros cuadrados"
+
+![flujoarearectangulo](/resource/1.4.png)
+
+![arearectangulo](/resource/1.6.png)
 
 
 ## Workshop : main
@@ -80,7 +105,7 @@ procedimientos( )
 - Drawio Preview
 
 ### Algoritmia
-- Problema 
+- Problema : mayor de dos números.
 - Solución
    - Pseudocodigo
    - Diagrama de flujo (DFD, Dreaw.io)
@@ -136,7 +161,7 @@ float -> punto flotante(números que puede tener una parte fraccionaria)
 
 # Declaración de variables e inicialización
 
-# Estructura de control
+## Estructura de control
 - Procedimiento
 
         void NombreProcedimiento()  {...}
@@ -168,16 +193,101 @@ float -> punto flotante(números que puede tener una parte fraccionaria)
 
 # Arreglo de caracteres
 
-1.- Arrays-Bufer-Vector- 
+1.- Arrays-Bufer-Vector-String: cadena de caracteres. 
 
 getchar-obtener un caracter, capturar
 EOF- final de archivo, genera un desbordamiento
-si me dice si entonces salta el caaxter almacenado entonces paso al siguiente nicel y si esta vapturado paso al siguiente, si uno de los tres esta mal hasta ahí, i es menor que cinco en la ssegunda parte c es menor que , hat que tener cuidado con en el orden, tener cuidado en los pararentesis por que puede generar error, tener en cuenta la precedencia de condición y tambien la precedencia de los símbolos 
-Las funciones pueden tener un nombre y parametro 
+si me dice si entonces salta el caracter almacenado entonces paso al siguiente nivel y si esta capturado paso al siguiente, si uno de los tres esta mal hasta ahí, i es menor que cinco en la segunda parte c es menor , hay que tener cuidado con en el orden, tener cuidado en los pararentesis por que puede generar error, tener en cuenta la precedencia de condición y tambien la precedencia de los símbolos 
+Las funciones pueden tener un nombre y parametro.
+
+> carateres + cadena de caracteres : string / array /vector
+
+```c
+char letra = 'a';
+char caracter = '1';
+char palabra[10] = "hola";
+char palabra[] = "como estas Angel";
+```
+> Entrada desde consola
+
+```c
+char c = getchar(); //--> EOF
+while (c! = EOF)
+//{....}
+```
 
 # TIPOS, OPERADORES Y EXPRESIONES
 
-en las constantes se suguiere que esten en las librerias  
+En las constantes se suguiere que esten en las librerias.
+
+```c
+#define VTAB '\013'
+#define BELL '\007'
+#define ENTER '\n'
+#define ALERT '\a'
+```
+"\a" caracter de alarma 
+
+"\b" retroceso 
+
+"\f" avance de hoja
+
+"\n" nueva linea
+
+"\r" regreso de carro
+
+"\t" tabulador horizontal
+
+"\v" tabulador vertical
+
+"\\\" diagonal invertida
+
+"\\?" interrogación
+
+"\\'  " apostrofo
+
+"\\"  " comillas
+
+"\ooo" numero octal
+
+"\xhh" nemero hexadecimal
+
+"\0" fin de cadena
+
+```c
+char s[] = "hola";       // longitud de cadena
+int i = strlen(s);
+
+char s[] = "125";        // de cadena a entero
+int numero = atoi(s)
+isdigit(c)
+```
+
+# Enumeradores + operadores
+
+enum escapes{
+   
+    BELL        ='\a',
+
+    RETROCESO   ='\b',
+    
+    TAB         ='\t',
+    
+    NVALAN      ='\n',
+    
+    VTAB        ='\t',
+    
+    RETURN      ='\r'
+};
+
+
+- &  AND de bits
+- | OR inclusivo de bits
+- ^ OR exclusivo de bits
+- << corrimiento a la izquierda
+- \>> corrimiento a la derecha
+- -- complemento a uno (unario)
+
 
 # Funciones
 
@@ -205,7 +315,13 @@ Cuando alguien invoca un archivo ya sea para leer o escribir
 
 archivo binario: nos ayuda a guardar los tipos de datosen forma binaria.
 
-b= binario
-r= lectura
-w= escritura
-a=añade datos al final del mismo
+- b =  binario
+- r = lectura
+- w = escritura
+- a = añade datos al final del mismo
+
+> Enviar a un txt
+```c
+archivo("files\\texto.txt");
+
+```
