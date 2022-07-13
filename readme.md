@@ -1,3 +1,5 @@
+27/05/2022
+
 # Uso del lenguaje c y c++ 
 - C programción estructurada
 
